@@ -7,7 +7,7 @@
     <div class="wrapper text-center">
       <strong>Sign in to get in touch</strong>
     </div>
-		<form name="form" class="form-validation" class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+    {!! Form::open(array('name' => 'form', 'class' => 'form-validation form-horizontal', 'role' => 'form')) !!}
       <div class="text-danger wrapper text-center" ng-show="authError">
 				@if (count($errors) > 0)
 					<div class="alert alert-danger">
@@ -22,10 +22,10 @@
       </div>
       <div class="list-group list-group-sm">
         <div class="list-group-item">
-          <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" name="email" value="{{ old('email') }}" required>
+          <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" name="email" value="{{ old('email') }}" >
         </div>
         <div class="list-group-item">
-        	<input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" class="form-control" name="password" required>
+        	<input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" class="form-control" name="password" >
         </div>
       </div>
       <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="login()" ng-disabled='form.$invalid'>Log in</button>
