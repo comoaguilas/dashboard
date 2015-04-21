@@ -16,9 +16,13 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
     User::create([
-			'name' => env('SEED_NAME', 'name'),
+			'first_name' => env('SEED_FIRTNAME', 'name'),
+			'last_name' => env('SEED_LASTNAME', 'name'),
+			'fullname' => env('SEED_FULLNAME', 'name'),
+			'title' => env('SEED_TITLE', 'name'),
 			'password' => Hash::make( env('SEED_PASSWORD', 'password') ) ,
 			'email' => env('SEED_EMAIL', 'email'),
+			'avatar' => env('SEED_AVATAR', 'email'),
 			]);
 	}
 

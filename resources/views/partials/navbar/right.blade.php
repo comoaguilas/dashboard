@@ -39,10 +39,10 @@
 	<li class="dropdown">
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
 			<span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-				<img src="{{ url('/img/migue.jpg') }}" alt="...">
+				<img src="/img/{{Auth::user()->avatar}}" alt="...">
 				<i class="on md b-white bottom"></i>
 			</span>
-			<span class="hidden-sm hidden-md">Miguelangel.Cabrera</span> <b class="caret"></b>
+			<span class="hidden-sm hidden-md">{{Auth::user()->fullname}}</span> <b class="caret"></b>
 		</a>
 		<!-- dropdown -->
 		<ul class="dropdown-menu animated fadeInRight w">

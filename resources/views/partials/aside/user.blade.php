@@ -2,16 +2,16 @@
 	<div class="dropdown wrapper">
 		<a href="app.page.profile">
 			<span class="thumb-lg w-auto-folded avatar m-t-sm">
-				<img src="{{ url('/img/migue.jpg') }}" class="img-full" alt="...">
+				<img src="/img/{{Auth::user()->avatar}}" class="img-full" alt="...">
 			</span>
 		</a>
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
 			<span class="clear">
 				<span class="block m-t-sm">
-					<strong class="font-bold text-lt">Miguelangel.Cabrera</strong>
+					<strong class="font-bold text-lt">{{Auth::user()->fullname}}</strong>
 					<b class="caret"></b>
 				</span>
-				<span class="text-muted text-xs block">Developer</span>
+				<span class="text-muted text-xs block">{{Auth::user()->title}}</span>
 			</span>
 		</a>
 		<!-- dropdown -->
