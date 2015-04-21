@@ -21,6 +21,11 @@ class AuthController extends Controller {
 	use AuthenticatesAndRegistersUsers;
 
 	/**
+	 * Override redirection path
+	 */
+	var $redirectTo = '/dashboard/home';
+
+	/**
 	 * Create a new authentication controller instance.
 	 *
 	 * @param  \Illuminate\Contracts\Auth\Guard  $auth
