@@ -14,7 +14,7 @@
 				<div class="list-group">
 					<a href class="media list-group-item">
 						<span class="pull-left thumb-sm">
-							<img src="img/a0.jpg" alt="..." class="img-circle">
+							<img src="{{ url('/img/migue.jpg') }}" alt="..." class="img-circle">
 						</span>
 						<span class="media-body block m-b-none">
 							Use awesome animate.css<br>
@@ -39,7 +39,7 @@
 	<li class="dropdown">
 		<a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
 			<span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-				<img src="img/a0.jpg" alt="...">
+				<img src="{{ url('/img/migue.jpg') }}" alt="...">
 				<i class="on md b-white bottom"></i>
 			</span>
 			<span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
@@ -71,7 +71,7 @@
 			</li>
 			<li class="divider"></li>
 			<li>
-				<a ui-sref="access.signin">Logout</a>
+				<a href="{{ url('/auth/logout') }}">Logout</a>
 			</li>
 		</ul>
 		<!-- / dropdown -->

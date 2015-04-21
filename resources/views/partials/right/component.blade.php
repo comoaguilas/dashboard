@@ -13,7 +13,7 @@
 					<ul class="list-group no-bg no-borders pull-in">
 						<li class="list-group-item">
 							<a herf class="pull-left thumb-sm avatar m-r">
-								<img src="img/a4.jpg" alt="..." class="img-circle">
+								<img src="{{ url('/img/a4.jpg') }}" alt="..." class="img-circle">
 								<i class="on b-white bottom"></i>
 							</a>
 							<div class="clear">
@@ -23,7 +23,7 @@
 						</li>
 						<li class="list-group-item">
 							<a herf class="pull-left thumb-sm avatar m-r">
-								<img src="img/a5.jpg" alt="..." class="img-circle">
+								<img src="{{ url('/img/a5.jpg') }}" alt="..." class="img-circle">
 								<i class="on b-white bottom"></i>
 							</a>
 							<div class="clear">
@@ -33,7 +33,7 @@
 						</li>
 						<li class="list-group-item">
 							<a herf class="pull-left thumb-sm avatar m-r">
-								<img src="img/a6.jpg" alt="..." class="img-circle">
+								<img src="{{ url('/img/a6.jpg') }}" alt="..." class="img-circle">
 								<i class="busy b-white bottom"></i>
 							</a>
 							<div class="clear">
@@ -43,7 +43,7 @@
 						</li>
 						<li class="list-group-item">
 							<a herf class="pull-left thumb-sm avatar m-r">
-								<img src="img/a7.jpg" alt="..." class="img-circle">
+								<img src="{{ url('/img/a7.jpg') }}" alt="..." class="img-circle">
 								<i class="away b-white bottom"></i>
 							</a>
 							<div class="clear">
@@ -53,7 +53,7 @@
 						</li>
 						<li class="list-group-item">
 							<a herf class="pull-left thumb-sm avatar m-r">
-								<img src="img/a8.jpg" alt="..." class="img-circle">
+								<img src="{{ url('/img/a8.jpg') }}" alt="..." class="img-circle">
 								<i class="away b-white bottom"></i>
 							</a>
 							<div class="clear">
@@ -72,7 +72,7 @@
 					<div class="m-b-sm text-md">Chat</div>
 					<ul class="list-group no-borders pull-in auto">
 						<li class="list-group-item">
-							<span class="pull-left thumb-sm m-r"><img src="img/a1.jpg" alt="..." class="img-circle"></span>
+							<span class="pull-left thumb-sm m-r"><img src="{{ url('/img/a1.jpg') }}" alt="..." class="img-circle"></span>
 							<a href class="text-muted" ui-toggle="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
 							<div class="clear">
 								<div><a href="">Chris Fox</a></div>
@@ -80,7 +80,7 @@
 							</div>
 						</li>
 						<li class="list-group-item">
-							<span class="pull-left thumb-sm m-r"><img src="img/a2.jpg" alt="..." class="img-circle"></span>
+							<span class="pull-left thumb-sm m-r"><img src="{{ url('/img/a2.jpg') }}" alt="..." class="img-circle"></span>
 							<a href class="text-muted" ui-toggle="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
 							<div class="clear">
 								<div><a href="">Amanda Conlan</a></div>
@@ -88,7 +88,7 @@
 							</div>
 						</li>
 						<li class="list-group-item">
-							<span class="pull-left thumb-sm m-r"><img src="img/a3.jpg" alt="..." class="img-circle"></span>
+							<span class="pull-left thumb-sm m-r"><img src="{{ url('/img/a3.jpg') }}" alt="..." class="img-circle"></span>
 							<a href class="text-muted" ui-toggle="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
 							<div class="clear">
 								<div><a href="">Dan Doorack</a></div>
@@ -96,7 +96,7 @@
 							</div>
 						</li>
 						<li class="list-group-item">
-							<span class="pull-left thumb-sm m-r"><img src="img/a4.jpg" alt="..." class="img-circle"></span>
+							<span class="pull-left thumb-sm m-r"><img src="{{ url('/img/a4.jpg') }}" alt="..." class="img-circle"></span>
 							<a href class="text-muted" ui-toggle="show" target=".app-aside-right"><i class="fa fa-comment-o pull-right m-t-sm text-sm"></i></a>
 							<div class="clear">
 								<div><a href="">Lauren Taylor</a></div>
@@ -201,7 +201,7 @@
 							<div class="cell-inner padder">
 								<!-- chat list -->
 								<div class="m-b">
-									<a href class="pull-left thumb-xs avatar"><img src="img/a2.jpg" alt="..."></a>
+									<a href class="pull-left thumb-xs avatar"><img src="{{ url('/img/a2.jpg') }}" alt="..."></a>
 									<div class="clear">
 										<div class="pos-rlt wrapper-sm b b-light r m-l-sm">
 											<span class="arrow left pull-up"></span>
@@ -211,7 +211,7 @@
 									</div>
 								</div>
 								<div class="m-b">
-									<a href class="pull-right thumb-xs avatar"><img src="img/a3.jpg" class="img-circle" alt="..."></a>
+									<a href class="pull-right thumb-xs avatar"><img src="{{ url('/img/a3.jpg') }}" class="img-circle" alt="..."></a>
 									<div class="clear">
 										<div class="pos-rlt wrapper-sm bg-light r m-r-sm">
 											<span class="arrow right pull-up arrow-light"></span>
@@ -221,7 +221,7 @@
 									</div>
 								</div>
 								<div class="m-b">
-									<a href class="pull-left thumb-xs avatar"><img src="img/a2.jpg" alt="..."></a>
+									<a href class="pull-left thumb-xs avatar"><img src="{{ url('/img/a2.jpg') }}" alt="..."></a>
 									<div class="clear">
 										<div class="pos-rlt wrapper-sm b b-light r m-l-sm">
 											<span class="arrow left pull-up"></span>
@@ -249,4 +249,3 @@
 			<!-- / aside right -->
 
 	</div>
-	
