@@ -22,7 +22,10 @@ class CreateUsersTable extends Migration {
 			$table->string('avatar');
 			$table->string('email')->unique();
 			$table->string('password', 60);
+			$table->integer('role_id')->unsigned();
+			$table->foreign('role_id')->references('id')->on('roles');
 			$table->rememberToken();
+			$table->tinyInteger('active')->default(1);
 			$table->timestamps();
 		});
 	}

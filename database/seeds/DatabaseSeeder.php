@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User as User;
+use App\Models\Role as Role;
 
 class DatabaseSeeder extends Seeder {
 
@@ -15,16 +16,52 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-    User::create([
-			'first_name' => env('SEED_FIRTNAME', 'name'),
-			'last_name' => env('SEED_LASTNAME', 'name'),
-			'fullname' => env('SEED_FULLNAME', 'name'),
-			'title' => env('SEED_TITLE', 'name'),
-			'password' => Hash::make( env('SEED_PASSWORD', 'password') ) ,
-			'email' => env('SEED_EMAIL', 'email'),
-			'avatar' => env('SEED_AVATAR', 'email'),
-			]);
+		$this->command->info('Database Seeder initialized.');
+
+		$this->call('RolesTableSeeder');
+		$this->call('UsersTableSeeder');
+
+    $this->command->info('Database Seeder finished.');
 	}
 
+}
 
+class RolesTableSeeder extends Seeder {
+
+    public function run() {
+
+    	DB::table('roles')->delete();
+
+			$this->command->info('Roles table was cleared.');
+
+			Role::create(['name' => 'superadmin', 'description' => 'superadmin']);
+			Role::create(['name' => 'admin', 'description' => 'admin']);
+			Role::create(['name' => 'editor', 'description' => 'editor']);
+			Role::create(['name' => 'user', 'description' => 'user']);
+
+			$this->command->info('The table "roles" was populated.');
+	}
+}
+
+class UsersTableSeeder extends Seeder {
+
+    public function run() {
+
+    	DB::table('users')->delete();
+
+			$this->command->info('Users table was cleared.');
+
+			User::create([
+				'first_name' => env('SEED_FIRSTNAME', 'SEED_FIRSTNAME'),
+				'last_name' => env('SEED_LASTNAME', 'SEED_LASTNAME'),
+				'fullname' => env('SEED_FULLNAME', 'SEED_FULLNAME'),
+				'title' => env('SEED_TITLE', 'SEED_TITLE'),
+				'password' => Hash::make( env('SEED_PASSWORD', 'SEED_PASSWORD') ) ,
+				'email' => env('SEED_EMAIL', 'SEED_EMAIL'),
+				'avatar' => env('SEED_AVATAR', 'SEED_AVATAR'),
+				'role_id' => env('SEED_ROLE', 'SEED_ROLE'),
+			]);
+
+			$this->command->info('The table "users" was populated.');
+	}
 }
