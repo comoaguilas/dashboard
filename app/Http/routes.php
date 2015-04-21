@@ -19,5 +19,5 @@ Route::controllers([
 ]);
 
 Route::group(['prefix' => 'dashboard'], function() {
-    Route::get('home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
 });

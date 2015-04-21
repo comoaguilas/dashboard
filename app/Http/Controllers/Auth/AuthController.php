@@ -23,7 +23,7 @@ class AuthController extends Controller {
 	/**
 	 * Override redirection path
 	 */
-	var $redirectTo = '/dashboard/home';
+	var $redirectTo = '/dashboard';
 
 	/**
 	 * Create a new authentication controller instance.
