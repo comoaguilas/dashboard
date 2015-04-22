@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User as User;
 use App\Models\Role as Role;
+use App\Models\Configuration;
 
 class DatabaseSeeder extends Seeder {
 
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('RolesTableSeeder');
 		$this->call('UsersTableSeeder');
+		$this->call('ConfigurationsTableSeeder');
 
     $this->command->info('Database Seeder finished.');
 	}
@@ -63,5 +65,20 @@ class UsersTableSeeder extends Seeder {
 			]);
 
 			$this->command->info('The table "users" was populated.');
+	}
+}
+
+class ConfigurationsTableSeeder extends Seeder {
+
+    public function run() {
+
+    	DB::table('configurations')->delete();
+
+			$this->command->info('Configurations table was cleared.');
+
+			Configuration::create(['type' => 'appName', 'desc' => 'Dashboard']);
+			Configuration::create(['type' => 'siteName', 'desc' => 'Como Aguilas']);
+
+			$this->command->info('The table "configurations" was populated.');
 	}
 }

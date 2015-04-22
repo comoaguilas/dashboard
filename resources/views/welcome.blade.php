@@ -38,15 +38,11 @@
         <li>
           <a href="#features" data-ride="scroll">Features</a>
         </li>
-        <li>
-          <a href="http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259">Download</a>
-        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
           <div class="m-t-sm">
-            <a href="../angular/#/access/signin" class="btn btn-link btn-sm">Sign in</a> or
-            <a href="../angular/#/access/signup" class="btn btn-sm btn-success btn-rounded m-l"><strong>Sign up</strong></a>
+            <a href="{{ url('/auth/login') }}" class="btn btn-sm btn-success btn-rounded m-l"><strong>Login</strong></a>
           </div>
         </li>
       </ul>
