@@ -32,7 +32,7 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('layout.frontend', [
+		return view('frontend', [
 			'siteName' => Configuration::siteName(),
 			'appName' => Configuration::appName(),
 			]);

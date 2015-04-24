@@ -17,58 +17,18 @@
 </head>
 <body>
 
+  <!-- header -->
+  @include('partials.frontend.header')
+  <!-- / header -->
 
-<!-- header -->
-<header id="header" class="navbar navbar-fixed-top bg-white-only padder-v"  data-spy="affix" data-offset-top="1">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a href="#" class="navbar-brand m-r-lg"><img src="img/logo.png" class="m-r-sm hide"><span class="h3 font-bold">{{ $siteName }}</span></a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav font-bold">
-        <li>
-          <a href="#what" data-ride="scroll">What is Angulr</a>
-        </li>
-        <li>
-          <a href="#why" data-ride="scroll">Why</a>
-        </li>
-        <li>
-          <a href="#features" data-ride="scroll">Features</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <div class="m-t-sm">
-            <a href="{{ url('/auth/login') }}" class="btn btn-sm btn-success btn-rounded m-l"><strong>Login</strong></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
-<!-- / header -->
 <div id="content">
 
-  <div class="bg-white-only container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <div class="m-t-xxl m-b-xxl padder-v">
-          <h1 class="font-bold l-h-1x m-t-xxl text-black padder-v animated fadeInDown">
-            AngularJS App, Html/jQuery, Music SPA, and App Landing,
-            <span class="b-b b-black b-3x">4 in 1</span> ui kits package.
-          </h1>
-          <h3 class="text-muted m-t-xl l-h-1x">Angulr is a <span class="b-b b-2x">Bootstrap</span> based web ui kits package, Using grunt and bower with Bootstrap and Angular, features <span class="b-b b-2x">nested views &amp; routing</span> and <span class="b-b b-2x">lazy load</span> for large project.</h3>
-        </div>
-        <p class="text-center m-b-xxl wrapper">
-          <a href="http://themeforest.net/item/angulr-bootstrap-admin-web-app-with-angularjs/8437259" target="_blank" class="btn b-2x btn-lg b-black btn-default btn-rounded text-lg font-bold m-b-xxl animated fadeInUpBig">Have it only $21</a>
-        </p>
-      </div>
-    </div>
-  </div>
+  <!-- first -->
+  @include('partials.frontend.first')
+  <!-- / first -->
+
   <div id="what" class="container m-b-xxl padder-v">
+    <h3 class="text-black font-bold m-b-lg">Quienes Somos</h3>
     <div class="row no-gutter">
       <div class="col-md-3 col-sm-6">
         <div class="bg-light m-r-n-md no-m-xs no-m-sm">
@@ -110,6 +70,7 @@
   </div>
   <div id="why" class="bg-light">
     <div class="container">
+      <h3 class="text-black font-bold m-b-lg">Iglesia</h3>
       <div class="m-t-xxl m-b-xl text-center wrapper">
         <h2 class="text-black font-bold">Why use <span class="b-b b-dark">AngularJS</span> for your next application?</h2>
         <p class="text-muted h4 m-b-xl">Build the Single-Page Applications -- SPAs</p>
@@ -155,6 +116,7 @@
   </div>
   <div id="features" class="bg-white-only">
     <div class="container">
+      <h3 class="text-black font-bold m-b-lg">Ministerios</h3>
       <div class="row m-t-xl m-b-xxl">
         <div class="col-sm-6" data-ride="animated" data-animation="fadeInLeft" data-delay="300">
             <div class="m-t-xxl">
