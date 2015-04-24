@@ -21,10 +21,6 @@
 			</div>
 			<!-- / main -->
 
-			<!-- right col -->
-			@include('partials.right.component')
-			<!-- / right col -->
-
 		</div>
 	</div>
 </div>
