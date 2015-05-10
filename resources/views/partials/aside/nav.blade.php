@@ -1,7 +1,7 @@
 <nav ui-nav class="navi clearfix">
 	<ul class="nav">
 		<li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-			<span>Navigation</span>
+			<span>{{ trans('messages.navigation') }}</span>
 		</li>
 		<li>
 			<a href class="auto">
