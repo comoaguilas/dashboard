@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{ asset('/css/app.css') }}" type="text/css') }}" />
 
 </head>
-<body class="login-content">
+<body @yield('body-class')>
 
   @yield('content')
 
