@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Configuration;
+
 class DashboardController extends Controller {
 
 	/*
@@ -30,7 +32,10 @@ class DashboardController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		return view('home', [
+			'siteName' => Configuration::siteName(),
+			'appName' => Configuration::appName(),
+			]);
 	}
 
 }
